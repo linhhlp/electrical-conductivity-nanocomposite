@@ -10,3 +10,11 @@ Recently, Artificial Intelligence is growing very fast and intensively applied i
 The data used in this simulation is not actual data. Instead, the data is generated with noise by using the exponential equation with different parameters for different pairs of composites. However, several resources for experimental data will be cited as references.
 
 Let's start from [Introduction](Step0_Introduction.ipynb)
+
+Version=1.1
+
+What's new / updated:
+
+1. Update Visualization in training and evaluating processes
+
+2. Update minor issues / information
