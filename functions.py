@@ -179,3 +179,15 @@ def smoothArray(data, size = 10):
     new_arr[0:5] = np.average(data[0:5] )
     new_arr[-5:]  = np.average(data[-5] )
     return new_arr
+
+# When plotting too many points of data, cut down randomly
+# Sparse data 
+def sparseArray(dataFrame, frac=0.95):
+    """ reduce data rows to `frac` ratio (sparse data)
+    
+    dataFrame Pandas dataFrame
+    frac fraction cut down. For example,  frac=0.95 remove 95%, only keep 5% leftover
+    Equivalent Function df = df.sample(frac= (1-frac) )
+    """
+    drop_indices = np.random.choice(dataFrame.index, int(np.ceil(len(dataFrame.index) * frac ) ) , replace=False)
+    return dataFrame.drop(drop_indices)
